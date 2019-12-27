@@ -23,7 +23,7 @@
                             @endif
                             <h1>QUESTION 1:</h1>
                             <!-- ESTE FOREACH MUESTRA LA PRIMERA PREGUNTA -->
-                            <label>
+                            <label class="text-white">
                                 @foreach ($nextquestion as $ques )
                                     <h2>{{ $ques->questionname }}</h2>
                                 @endforeach
@@ -40,23 +40,23 @@
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <input type="hidden" name="_method" value="POST">
                                 <p class="questions1">
-                                    <label class="answer">ALTERNATIVES:
+                                    <label class="answer text-white">ALTERNATIVES:
                                         <br>
                                         <br>
-                                        <input type="radio" name="question" value="867"> Patrón de Diseño de Componentes Altamente Cohesivos.
+                                        <input class="text-white"type="radio" name="question" value="867"> Patrón de Diseño de Componentes Altamente Cohesivos.
                                         <br>
                                         <br>
-                                        <input type="radio" name="question" value="123"> Patrón de Separación de Preocupaciones/Responsabilidades.
+                                        <input class="text-white"type="radio" name="question" value="123"> Patrón de Separación de Preocupaciones/Responsabilidades.
                                         <br>
                                         <br>
                                         <!-- HACEMOS UN RECORRIDO PARA MOSTRAR LA RESPUESTA DE LA SEGUNDA PREGUNTA DE LA TABLA QUUESTION   -->
-                                        <input type="radio" name="question" value="1">
+                                        <input class="text-white"type="radio" name="question" value="1">
                                                 @foreach ($nextanswer as $ans)
                                                     {{ $ans->answername }}
                                                 @endforeach
                                         <br>
                                         <br>
-                                        <input type="radio" name="question" value="929"> Ninguno de los anteriores.
+                                        <input class="text-white"type="radio" name="question" value="929"> Ninguno de los anteriores.
                                         <br>
                                         <br>
                                     </label>
